@@ -1,0 +1,19 @@
+body {
+	background: url('../img/arches.png');
+	text-align: center;
+}
+
+#logo {
+	margin-top: 100px;
+}
+
+.kittens {
+	width: 440px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.kitten {
+	float: left;
+}

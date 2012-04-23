@@ -1,0 +1,33 @@
+<?php $this->render('header'); ?>
+
+<div class="skeleton">
+
+	<img id="logo" src="<?php $this->put('media_url'); ?>/img/logo.png" alt="<?php $this->put('site_name'); ?>" />
+
+	<p><?php $this->put('subtitle'); ?></p>
+
+	<?php if ($this->get('nope')): ?>
+		<p>This won't show up!</p>
+	<?php endif; ?>
+	
+	<?php if($this->get('kittens')): ?>
+
+		<ul class="kittens thumbnails">
+
+			<?php foreach($this->get('kittens') as $kitten): ?>
+
+				<a class="kitten thumbnail" href="<?php $this->e($kitten['url']); ?>" title="<?php $this->e($kitten['description']); ?>" target="_blank">
+
+					 <img src="<?php $this->e($kitten['url']); ?>" alt="<?php $this->e($kitten['description']); ?>" />
+
+				</a>
+
+			<?php endforeach; ?>
+
+		</ul>
+
+	<?php endif; ?>
+
+</div>
+
+<?php $this->render('footer'); ?>
